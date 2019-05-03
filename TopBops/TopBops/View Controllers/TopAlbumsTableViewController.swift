@@ -9,7 +9,7 @@
 import UIKit
 
 class TopAlbumsTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,24 +21,24 @@ class TopAlbumsTableViewController: UITableViewController {
             }
             
             DispatchQueue.main.async {
-                 self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albumController.albums.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
-
+        
         let album = albumController.albums[indexPath.row]
         cell.album = album
         loadImage(forCell: cell, forItemAt: indexPath)
-
+        
         return cell
     }
     
@@ -48,18 +48,25 @@ class TopAlbumsTableViewController: UITableViewController {
         
         let album = albumController.albums[indexPath.row]
         
-        
-        
+        albumController.fetchImage(album: album, completion: { (data, _) in
+            
+            guard let data = data else { return }
+            
+            DispatchQueue.main.async {
+                cell.thumbnailImageView.image = UIImage(data: data)
+            }
+            
+        })
         
     }
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
     }
-
+    
     // MARK: - Properties
     
     let albumController = AlbumController()

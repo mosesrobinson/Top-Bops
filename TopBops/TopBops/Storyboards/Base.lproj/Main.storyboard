@@ -50,6 +50,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="196" id="xPE-FE-jKW"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>

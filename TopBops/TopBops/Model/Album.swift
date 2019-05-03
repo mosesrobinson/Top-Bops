@@ -17,6 +17,7 @@ struct Album: Codable {
     let copyright: String
     let artworkURL: URL
     let itunesURL: URL
+    let id: String
     
     struct Genre: Codable {
         let name: String
@@ -30,6 +31,7 @@ struct Album: Codable {
         case copyright
         case artworkURL = "artworkUrl100"
         case itunesURL = "url"
+        case id
     }
 }
 
