@@ -40,8 +40,9 @@ class AlbumController {
             
             do {
                 let jsonDecoder = JSONDecoder()
-                let decodedAlbums = try jsonDecoder.decode(Albums.self, from: data).results
-                
+                let decodedDictionary = try jsonDecoder.decode(JSON.self, from: data)
+                let decodedAlbums = decodedDictionary.feed.results
+            
                 self.albums = decodedAlbums
                 completion(nil)
             } catch {

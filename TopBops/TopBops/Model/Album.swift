@@ -33,6 +33,10 @@ struct Album: Codable {
     }
 }
 
-struct Albums: Codable {
+struct JSON: Codable {
+    let feed: Feed
+}
+
+struct Feed: Codable {
     let results: [Album]
 }

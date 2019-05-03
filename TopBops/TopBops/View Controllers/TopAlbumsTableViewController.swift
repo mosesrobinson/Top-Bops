@@ -13,19 +13,19 @@ class TopAlbumsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return albumController.albums.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
 
-        // Configure the cell...
+        let album = albumController.albums[indexPath.row]
+        cell.album = album
 
         return cell
     }
@@ -39,6 +39,6 @@ class TopAlbumsTableViewController: UITableViewController {
 
     // MARK: - Properties
     
-    
+    let albumController = AlbumController()
     
 }
