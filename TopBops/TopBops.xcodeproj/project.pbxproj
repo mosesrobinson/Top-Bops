@@ -13,6 +13,9 @@
 		39E67C90227BF5EE0077DE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E67C8E227BF5EE0077DE3E /* LaunchScreen.storyboard */; };
 		39E67C9F227BFD680077DE3E /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67C9E227BFD680077DE3E /* AlbumTableViewCell.swift */; };
 		39E67CA1227BFD9B0077DE3E /* TopAlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA0227BFD9B0077DE3E /* TopAlbumsTableViewController.swift */; };
+		39E67CA4227C1CC00077DE3E /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA3227C1CC00077DE3E /* AlbumDetailViewController.swift */; };
+		39E67CA6227C1D020077DE3E /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA5227C1D020077DE3E /* AlbumController.swift */; };
+		39E67CA8227C1D120077DE3E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA7227C1D120077DE3E /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		39E67C91227BF5EE0077DE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E67C9E227BFD680077DE3E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		39E67CA0227BFD9B0077DE3E /* TopAlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewController.swift; sourceTree = "<group>"; };
+		39E67CA2227C00E80077DE3E /* ExpectedBehavior.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ExpectedBehavior.playground; path = TopBops/ExpectedBehavior.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		39E67CA3227C1CC00077DE3E /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		39E67CA5227C1D020077DE3E /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
+		39E67CA7227C1D120077DE3E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +47,7 @@
 		39E67C79227BF5EC0077DE3E = {
 			isa = PBXGroup;
 			children = (
+				39E67CA2227C00E80077DE3E /* ExpectedBehavior.playground */,
 				39E67C84227BF5EC0077DE3E /* TopBops */,
 				39E67C83227BF5EC0077DE3E /* Products */,
 			);
@@ -69,6 +77,7 @@
 		39E67C97227BFCD40077DE3E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39E67CA7227C1D120077DE3E /* Album.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				39E67CA0227BFD9B0077DE3E /* TopAlbumsTableViewController.swift */,
+				39E67CA3227C1CC00077DE3E /* AlbumDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 		39E67C9A227BFCEC0077DE3E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				39E67CA5227C1D020077DE3E /* AlbumController.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -187,8 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E67C86227BF5EC0077DE3E /* AppDelegate.swift in Sources */,
+				39E67CA6227C1D020077DE3E /* AlbumController.swift in Sources */,
+				39E67CA4227C1CC00077DE3E /* AlbumDetailViewController.swift in Sources */,
 				39E67CA1227BFD9B0077DE3E /* TopAlbumsTableViewController.swift in Sources */,
 				39E67C9F227BFD680077DE3E /* AlbumTableViewCell.swift in Sources */,
+				39E67CA8227C1D120077DE3E /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
