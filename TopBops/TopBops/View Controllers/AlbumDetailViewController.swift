@@ -13,6 +13,7 @@ class AlbumDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        setUpAppearance()
     }
     
     @IBAction func purchaseOnItunesTapped(_ sender: Any) {
@@ -22,6 +23,8 @@ class AlbumDetailViewController: UIViewController {
         
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+    //MARK: - Private Methods
     
     private func updateViews() {
         
@@ -46,6 +49,15 @@ class AlbumDetailViewController: UIViewController {
         })
     }
     
+    private func setUpAppearance() {
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        purchaseButton.layer.cornerRadius = 10
+        artworkImageView.layer.cornerRadius = 8
+        genreAndDateContainer.layer.cornerRadius = 8
+        containerView.backgroundColor = AppearanceHelper.softOrange
+    }
+    
     //MARK: - Properties
     
     var albumController: AlbumController?
@@ -64,4 +76,6 @@ class AlbumDetailViewController: UIViewController {
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var genreAndDateContainer: UIView!
 }

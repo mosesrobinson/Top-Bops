@@ -16,6 +16,7 @@
 		39E67CA4227C1CC00077DE3E /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA3227C1CC00077DE3E /* AlbumDetailViewController.swift */; };
 		39E67CA6227C1D020077DE3E /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA5227C1D020077DE3E /* AlbumController.swift */; };
 		39E67CA8227C1D120077DE3E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CA7227C1D120077DE3E /* Album.swift */; };
+		39E67CB2227C6C560077DE3E /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E67CB1227C6C560077DE3E /* AppearanceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		39E67CA3227C1CC00077DE3E /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		39E67CA5227C1D020077DE3E /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
 		39E67CA7227C1D120077DE3E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		39E67CB1227C6C560077DE3E /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		39E67CAE227C58A50077DE3E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				39E67CB1227C6C560077DE3E /* AppearanceHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				39E67C86227BF5EC0077DE3E /* AppDelegate.swift in Sources */,
 				39E67CA6227C1D020077DE3E /* AlbumController.swift in Sources */,
 				39E67CA4227C1CC00077DE3E /* AlbumDetailViewController.swift in Sources */,
+				39E67CB2227C6C560077DE3E /* AppearanceHelper.swift in Sources */,
 				39E67CA1227BFD9B0077DE3E /* TopAlbumsTableViewController.swift in Sources */,
 				39E67C9F227BFD680077DE3E /* AlbumTableViewCell.swift in Sources */,
 				39E67CA8227C1D120077DE3E /* Album.swift in Sources */,

@@ -16,6 +16,7 @@ class AlbumTableViewCell: UITableViewCell {
         
         albumNameLabel.text = album.albumName
         artistNameLabel.text = album.artistName
+        thumbnailImageView.layer.cornerRadius = 8
     }
     
     //MARK: - Properties
