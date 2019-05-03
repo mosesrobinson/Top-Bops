@@ -45,6 +45,29 @@ class AlbumController {
         dataTask.resume()
     }
     
+    func fetchImage(album: Album, completion: @escaping (Data?, Error?) -> Void) {
+        
+        let artworkURL = album.artworkURL
+        
+        let dataTask = URLSession.shared.dataTask(with: artworkURL) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error found while fetching from URL: \(error)")
+                completion(nil, error)
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("No data found from URL.")
+                completion(nil, error)
+                return
+            }
+            
+            completion(data, nil)
+        }
+        dataTask.resume()
+    }
+    
     //MARK: - Properties
     
     private let baseURL = URL(string: "https://rss.itunes.apple.com/api/v1/us/itunes-music/top-albums/all/10")!

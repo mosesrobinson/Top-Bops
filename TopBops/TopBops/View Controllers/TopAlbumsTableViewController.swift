@@ -37,8 +37,20 @@ class TopAlbumsTableViewController: UITableViewController {
 
         let album = albumController.albums[indexPath.row]
         cell.album = album
+        loadImage(forCell: cell, forItemAt: indexPath)
 
         return cell
+    }
+    
+    //MARK: - Private Methods
+    
+    private func loadImage(forCell cell: AlbumTableViewCell, forItemAt indexPath: IndexPath) {
+        
+        let album = albumController.albums[indexPath.row]
+        
+        
+        
+        
     }
     
     // MARK: - Navigation
