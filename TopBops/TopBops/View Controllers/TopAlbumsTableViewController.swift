@@ -49,22 +49,26 @@ class TopAlbumsTableViewController: UITableViewController {
         let album = albumController.albums[indexPath.row]
         
         albumController.fetchImage(album: album, completion: { (data, _) in
-            
             guard let data = data else { return }
             
             DispatchQueue.main.async {
                 cell.thumbnailImageView.image = UIImage(data: data)
             }
-            
         })
-        
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        if segue.identifier == "ShowAlbumDetail" {
+            guard let destination = segue.destination as? AlbumDetailViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let album = albumController.albums[indexPath.row]
+            
+            destination.album = album
+            destination.albumController = albumController
+        }
     }
     
     // MARK: - Properties

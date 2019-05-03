@@ -11,6 +11,7 @@ import UIKit
 class AlbumTableViewCell: UITableViewCell {
     
     private func updateViews() {
+        
         guard let album = album else { return }
         
         albumNameLabel.text = album.albumName

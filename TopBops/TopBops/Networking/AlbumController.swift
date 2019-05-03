@@ -40,7 +40,6 @@ class AlbumController {
                 completion(error)
                 return
             }
-            
         }
         dataTask.resume()
     }
@@ -62,7 +61,6 @@ class AlbumController {
                 completion(nil, error)
                 return
             }
-            
             completion(data, nil)
         }
         dataTask.resume()
