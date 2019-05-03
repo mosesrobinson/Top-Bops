@@ -10,17 +10,7 @@ import Foundation
 
 class AlbumController {
     
-    init() {
-        fetchTopTenAlbums { (error) in
-            
-            if let error = error {
-                NSLog("Unable to fetch albums from RSS Feed: \(error)")
-                return
-            }
-        }
-    }
-    
-    private func fetchTopTenAlbums(completion: @escaping (Error?) -> Void) {
+    func fetchTopTenAlbums(completion: @escaping (Error?) -> Void) {
         
         let url = baseURL.appendingPathComponent("explicit").appendingPathExtension("json")
         
@@ -42,7 +32,7 @@ class AlbumController {
                 let jsonDecoder = JSONDecoder()
                 let decodedDictionary = try jsonDecoder.decode(JSON.self, from: data)
                 let decodedAlbums = decodedDictionary.feed.results
-            
+                
                 self.albums = decodedAlbums
                 completion(nil)
             } catch {

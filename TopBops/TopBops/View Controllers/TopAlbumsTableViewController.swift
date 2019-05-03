@@ -12,7 +12,18 @@ class TopAlbumsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        albumController.fetchTopTenAlbums { (error) in
+            
+            if let error = error {
+                NSLog("Unable to fetch albums from RSS Feed: \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                 self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source

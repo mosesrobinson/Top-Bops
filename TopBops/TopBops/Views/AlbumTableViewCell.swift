@@ -10,12 +10,25 @@ import UIKit
 
 class AlbumTableViewCell: UITableViewCell {
 
+    private func updateViews() {
+        guard let album = album else { return }
+        
+        albumNameLabel.text = album.albumName
+        artistNameLabel.text = album.artistName
+    }
     
+    //MARK: - Properties
     
     var album: Album? {
         didSet {
-            
+           updateViews()
         }
     }
-
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    
 }
